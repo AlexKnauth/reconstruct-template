@@ -1,5 +1,7 @@
 # reconstruct-template
 
+[![Build Status](https://travis-ci.org/AlexKnauth/reconstruct-template.png?branch=master)](https://travis-ci.org/AlexKnauth/reconstruct-template)
+
 ```racket
 (require reconstruct-template/list-ctx)
 ```
