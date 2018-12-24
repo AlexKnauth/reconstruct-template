@@ -22,6 +22,9 @@
                  reconstruct-template/list-ctx))
    ev)
 
+Source code:
+@url{https://github.com/AlexKnauth/reconstruct-template}.
+
 @defmodule[reconstruct-template/list-ctx]{
 
 Provides @racket[~list/ctx] and @racket[?list/ctx]
