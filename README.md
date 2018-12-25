@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/AlexKnauth/reconstruct-template.png?branch=master)](https://travis-ci.org/AlexKnauth/reconstruct-template)
 
+[_Documentation_](http://docs.racket-lang.org/reconstruct-template-list-ctx/index.html).
+
 ```racket
 (require reconstruct-template/list-ctx)
 ```
