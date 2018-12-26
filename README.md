@@ -8,7 +8,7 @@
 (require reconstruct-template/list-ctx)
 ```
 
-Provides `~list/ctx` and `?list/ctx`, as a pattern-expander and a template-metafunction which go together so that if `x` is a syntax-list,
+Provides [`~list/ctx`][~list/ctx] and [`?list/ctx`][?list/ctx], as a pattern-expander and a template-metafunction which go together so that if `x` is a syntax-list,
 
 ```racket
 (syntax-parse x
@@ -20,9 +20,9 @@ x
 
 You can think of these as similar to `(e ...)`, where `ctx` saves the lexical context, source location, and syntax properties of the parens, and transfers them over to the result syntax object.
 
-The main intended use of `~list/ctx` and `?list/ctx` is for reconstructing syntax objects when making expanders for new *core-form languages*. This purpose is similar to [`syntax/loc/props`][syntax/loc/props] from Alexis King's blog post [_Reimplementing Hackett’s type language: expanding to custom core forms in Racket_][lexi-lambda-core-forms].
+The main intended use of [`~list/ctx`][~list/ctx] and [`?list/ctx`][?list/ctx] is for reconstructing syntax objects when making expanders for new *core-form languages*. This purpose is similar to [`syntax/loc/props`][syntax/loc/props] from Alexis King's blog post [_Reimplementing Hackett’s type language: expanding to custom core forms in Racket_][lexi-lambda-core-forms].
 
-The main advantage of `~list/ctx` and `?list/ctx` over [`syntax/loc`][syntax/loc] or [`syntax/loc/props`][syntax/loc/props] is that they work even for stx-list templates nested deeply within a template, as well as for stx-list templates under ellipses. For example, if `x` is a well-formed `let` expression,
+The main advantage of [`~list/ctx`][~list/ctx] and [`?list/ctx`][?list/ctx] over [`syntax/loc`][syntax/loc] or [`syntax/loc/props`][syntax/loc/props] is that they work even for stx-list templates nested deeply within a template, as well as for stx-list templates under ellipses. For example, if `x` is a well-formed `let` expression,
 
 ```racket
 (syntax-parse x
@@ -35,6 +35,10 @@ The main advantage of `~list/ctx` and `?list/ctx` over [`syntax/loc`][syntax/loc
 =
 x
 ```
+
+  [~list/ctx]: https://docs.racket-lang.org/reconstruct-template-list-ctx/index.html#%28form._%28%28lib._reconstruct-template%2Flist-ctx..rkt%29._~7elist%2Fctx%29%29
+  
+  [?list/ctx]: https://docs.racket-lang.org/reconstruct-template-list-ctx/index.html#%28form._%28%28lib._reconstruct-template%2Flist-ctx..rkt%29._~3flist%2Fctx%29%29
 
   [syntax/loc]: https://docs.racket-lang.org/reference/stx-patterns.html#(form._((lib._racket%2Fprivate%2Fstxcase-scheme..rkt)._syntax%2Floc))
 
